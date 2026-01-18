@@ -641,3 +641,9 @@ img {
     border-color: var(--primary);
     transform: scale(1.05);
 }
+
+/* Highlight PI and Partner names in publications */
+.author-highlight {
+    color: #4ECDC4;
+    font-weight: 600;
+}

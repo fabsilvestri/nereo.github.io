@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset;
-        
+
         if (currentScroll > 100) {
             header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
         } else {
@@ -73,6 +73,17 @@ document.addEventListener('DOMContentLoaded', () => {
         el.style.transform = 'translateY(20px)';
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
+    });
+
+    // Highlight PI and Partner names in publications
+    const highlightNames = ['Fabrizio Silvestri', 'Nicola Tonellotto'];
+    document.querySelectorAll('.pub-authors').forEach(authorSpan => {
+        let html = authorSpan.innerHTML;
+        highlightNames.forEach(name => {
+            const regex = new RegExp(`(${name})`, 'g');
+            html = html.replace(regex, '<span class="author-highlight">$1</span>');
+        });
+        authorSpan.innerHTML = html;
     });
 });
 
