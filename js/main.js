@@ -80,7 +80,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.pub-authors').forEach(authorSpan => {
         let html = authorSpan.innerHTML;
         highlightNames.forEach(name => {
-            const regex = new RegExp(`(${name})`, 'g');
+            // Create regex that matches the name even with whitespace/newlines between parts
+            const parts = name.split(' ');
+            const regexPattern = parts.join('\\s+');
+            const regex = new RegExp(`(${regexPattern})`, 'gi');
             html = html.replace(regex, '<span class="author-highlight">$1</span>');
         });
         authorSpan.innerHTML = html;
