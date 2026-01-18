@@ -4,7 +4,7 @@ Official website for the NEREO PRIN2022 research project on Neural Information R
 
 ## 🌐 Live Site
 
-Visit: ![https://nereo.github.io][https://nereo.github.io](https://fabsilvestri.github.io/nereo.github.io/))
+Visit: [https://fabsilvestri.github.io/nereo.github.io/](https://fabsilvestri.github.io/nereo.github.io/)
 
 ## 📁 Structure
 
