@@ -662,11 +662,31 @@ img {
 
 /* Logo image styles */
 .logo-img {
-    height: 40px;
+    height: 60px;
     width: auto;
     transition: var(--transition);
 }
 
 .logo-img:hover {
     transform: scale(1.05);
+}
+
+/* Hero logo styles */
+.hero-logo {
+    max-width: 500px;
+    width: 90%;
+    height: auto;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
