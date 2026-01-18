@@ -659,3 +659,14 @@ img {
 .download-link:hover {
     color: #67E8DE;
 }
+
+/* Logo image styles */
+.logo-img {
+    height: 40px;
+    width: auto;
+    transition: var(--transition);
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
