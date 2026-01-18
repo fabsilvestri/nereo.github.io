@@ -647,3 +647,15 @@ img {
     color: #4ECDC4;
     font-weight: 600;
 }
+
+/* Download link styles */
+.download-link {
+    color: #4ECDC4;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.download-link:hover {
+    color: #67E8DE;
+}
